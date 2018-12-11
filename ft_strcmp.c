@@ -6,21 +6,21 @@
 /*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 16:02:06 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/09 13:45:45 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/11 17:24:19 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 == *s2)
+	{
+		if (!(*s1) || !(*s2))
+			break ;
+		else
 		{
-			if (!(*s1) || !(*s2))
-				break;
-			else
-			{
-				s1++;
-				s2++;
-			}
+			s1++;
+			s2++;
 		}
+	}
 	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

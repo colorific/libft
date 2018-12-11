@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 15:01:58 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/11 17:24:23 by kirill           ###   ########.fr       */
+/*   Created: 2018/12/06 14:15:34 by forange-          #+#    #+#             */
+/*   Updated: 2018/12/06 14:25:05 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+int		ft_toupper(int c)
 {
-	return (ft_isdigit(c) || ft_isalpha(c));
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }
