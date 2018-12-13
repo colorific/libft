@@ -6,7 +6,7 @@
 /*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/13 02:02:53 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/13 18:08:40 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,15 @@ int main(void)
 {
 //	char str;
 //	char in[50] = "some fun \0 dk hope";
-	char in2[7] = {0};
-	char in3[7] = {0};
+	unsigned char in2[10] = "1234567890";
+	unsigned char src[10] = "1234567890";
+//	char in3[7] = {0};
 //	int c = 1;
 //	char *test;
 //	char *test2;
 //	size_t size;
 //	size_t n = 0;
-	char *ptr = NULL;
+//	char *ptr = NULL;
 /*	long int lomax;
 	long int lomin;
 	unsigned long ulo;
@@ -88,10 +89,10 @@ int main(void)
 //		scanf("%d", &c);
 //		printf("libc: %s; ft_strchr: %s\n", strchr(in, c), ft_strchr(in, c));
 //		printf("libc: %p; ft_memcpy: %p\n", memcpy(ptr, in, c), ft_memcpy(ptr, in, c));
-		ptr = strdup("test\200string");
-		printf("libc: %p\n%s\n%p\n", memccpy(in2, ptr, '\200', 7), in2, ft_memccpy(in3, ptr, '\200', 7));
-		printBits (sizeof(in2), in2);
-		printBits (sizeof(in3), in3);
+//		ptr = strdup("test\200string");
+//		printf("libc: %p\n%s\n%p\n", memccpy(in2, ptr, '\200', 7), in2, ft_memccpy(in3, ptr, '\200', 7));
+//		printBits (sizeof(in2), in2);
+//		printBits (sizeof(in3), in3);
 //		scanf("%[^\n]%*c", in2);
 //		scanf("%zi", &size);
 //		size = strlen(in2);
@@ -102,5 +103,15 @@ int main(void)
 //		printf("libc: %d; my_ft: %d", strcmp(in, in2), ft_strcmp(in, in2));
 //		printf("libc: %d; my_ft: %d", strncmp(in, in2, n), ft_strncmp(in, in2, n));
 		usleep(10000);
+
+/* memmove */
+
+		printBits (sizeof(src), src);
+		memmove (&src[4], &src[3], 3);
+		printf ("src new:\n");
+		printBits (sizeof(src), src);
+		memmove (&in2[3], &in2[4], 3);
+		printf ("src new:\n");
+		printBits (sizeof(in2), in2);
 	//}
 }

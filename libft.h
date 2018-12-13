@@ -6,7 +6,7 @@
 /*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 03:24:11 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/13 01:10:30 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/13 17:18:26 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define LIBFT_H
 
 # include <string.h>
-
-char	*ft_strchr_new(const char *s, int c);
 
 int		ft_atoi(const char *str);
 int		ft_tolower(int c);
@@ -35,5 +33,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
 
 #endif
