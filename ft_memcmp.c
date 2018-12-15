@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/12 23:39:45 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/15 18:53:55 by forange-         ###   ########.fr       */
+/*   Created: 2018/12/15 20:01:08 by forange-          #+#    #+#             */
+/*   Updated: 2018/12/15 21:34:09 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memcpy(void *dst, const void *src, size_t n)
+int						ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char		*ndest;
-	const char	*nsrc;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
+	int					flag;
 
-	ndest = (char *)dst;
-	nsrc = (const char *)src;
-	if (dst != src)
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
+	while ((flag = (*str1 == *str2)) && n--)
 	{
-		while (n--)
-			*ndest++ = *nsrc++;
+		str1++;
+		str2++;
 	}
-	return (dst);
+	if (!n)
+		return (0);
+	return (flag ? 0 : (*str1 - *str2));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/13 18:08:40 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/15 21:25:28 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,19 @@
 #include "libft.h"
 
 void printBits(size_t const size, void const * const ptr);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 int main(void)
 {
 //	char str;
 //	char in[50] = "some fun \0 dk hope";
-	unsigned char in2[10] = "1234567890";
-	unsigned char src[10] = "1234567890";
+	char *in2 = "\xff\xaa\xde\x12";
+	char *src = "\xff\xaa\xde\x12MACOSAAAAA";
 //	char in3[7] = {0};
 //	int c = 1;
 //	char *test;
 //	char *test2;
-//	size_t size;
+	size_t size = 4;
 //	size_t n = 0;
 //	char *ptr = NULL;
 /*	long int lomax;
@@ -105,7 +106,7 @@ int main(void)
 		usleep(10000);
 
 /* memmove */
-
+/*
 		printBits (sizeof(src), src);
 		memmove (&src[4], &src[3], 3);
 		printf ("src new:\n");
@@ -114,4 +115,9 @@ int main(void)
 		printf ("src new:\n");
 		printBits (sizeof(in2), in2);
 	//}
+*/
+/* memchr */
+
+		printf ("%d and %d\n", memcmp(in2, src, size), ft_memcmp(in2, src, size));
+		//printf ("%s and %s\n", memcmp(src, 49, 1), ft_memcmp(src, 49, 1));
 }
