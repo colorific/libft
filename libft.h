@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
+/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 03:24:11 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/15 20:10:57 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/16 00:45:37 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strcpy(char * dst, const char * src);
 
 #endif

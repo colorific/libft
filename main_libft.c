@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
+/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/15 21:25:28 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/16 00:32:52 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ int main(void)
 {
 //	char str;
 //	char in[50] = "some fun \0 dk hope";
-	char *in2 = "\xff\xaa\xde\x12";
-	char *src = "\xff\xaa\xde\x12MACOSAAAAA";
+	char *in2 = "zyxbcdefgh";
+	char *src = "abcdefgxyz";
 //	char in3[7] = {0};
 //	int c = 1;
 //	char *test;
 //	char *test2;
-	size_t size = 4;
+	size_t size = 0;
 //	size_t n = 0;
 //	char *ptr = NULL;
 /*	long int lomax;
