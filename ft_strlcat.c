@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/13 16:31:11 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/16 17:28:41 by forange-         ###   ########.fr       */
+/*   Created: 2018/12/16 19:22:15 by forange-          #+#    #+#             */
+/*   Updated: 2018/12/16 19:24:21 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	if (n)
-		ft_memset(s, 0, n);
+
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/16 00:32:52 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/16 19:15:42 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int main(void)
 {
 //	char str;
-//	char in[50] = "some fun \0 dk hope";
-	char *in2 = "zyxbcdefgh";
-	char *src = "abcdefgxyz";
+	char in[15] = "rrrrrr\0\0a";
+	char in2[15] = "rrrrrr\0\0a";
+	char *src = "lorem";
 //	char in3[7] = {0};
 //	int c = 1;
 //	char *test;
 //	char *test2;
-	size_t size = 0;
+//	size_t size = 0;
 //	size_t n = 0;
 //	char *ptr = NULL;
 /*	long int lomax;
@@ -118,6 +118,13 @@ int main(void)
 */
 /* memchr */
 
-		printf ("%d and %d\n", memcmp(in2, src, size), ft_memcmp(in2, src, size));
+//		printf ("%d and %d\n", memcmp(in2, src, size), ft_memcmp(in2, src, size));
 		//printf ("%s and %s\n", memcmp(src, 49, 1), ft_memcmp(src, 49, 1));
+
+/* strncpy
+		printf("String: %s\n", strncpy(in2, src, strlen(src)));
+		printBits(sizeof(in2), in2);
+*/
+/* strncat */
+		printf("String: %s AND %s\n", strncat(in2, src, 2), ft_strncat(in, src, 2));
 }

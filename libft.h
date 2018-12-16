@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 03:24:11 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/16 00:45:37 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/16 18:45:49 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdlib.h>
 
 int		ft_atoi(const char *str);
 int		ft_tolower(int c);
@@ -38,6 +39,10 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-char	*ft_strcpy(char * dst, const char * src);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+char	*ft_strdup(const char *s1);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 
 #endif

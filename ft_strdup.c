@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/13 16:31:11 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/16 17:28:41 by forange-         ###   ########.fr       */
+/*   Created: 2018/12/16 18:03:26 by forange-          #+#    #+#             */
+/*   Updated: 2018/12/16 18:17:39 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char		*ft_strdup(const char *s1)
 {
-	if (n)
-		ft_memset(s, 0, n);
+	char	*res;
+	size_t	len;
+
+	len = ft_strlen(s1);
+	res = (char*)malloc(len + 1);
+	if (!res)
+		return (NULL);
+	res = ft_memmove(res, s1, len + 1);
+	return (res);
 }
