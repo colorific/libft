@@ -6,7 +6,7 @@
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 03:24:11 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/16 18:45:49 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/16 20:58:57 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strdup(const char *s1);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif

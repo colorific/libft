@@ -6,7 +6,7 @@
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/16 19:15:42 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/16 21:09:08 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int main(void)
 {
 //	char str;
-	char in[15] = "rrrrrr\0\0a";
-	char in2[15] = "rrrrrr\0\0a";
-	char *src = "lorem";
+	char in[30] = "rrrrrr\0\0a";
+	char in2[30] = "rrrrrr\0\0a";
+	char *src = "loremipsum";
 //	char in3[7] = {0};
 //	int c = 1;
 //	char *test;
 //	char *test2;
-//	size_t size = 0;
+	size_t size = 0;
 //	size_t n = 0;
 //	char *ptr = NULL;
 /*	long int lomax;
@@ -95,7 +95,7 @@ int main(void)
 //		printBits (sizeof(in2), in2);
 //		printBits (sizeof(in3), in3);
 //		scanf("%[^\n]%*c", in2);
-//		scanf("%zi", &size);
+		scanf("%zi", &size);
 //		size = strlen(in2);
 //		scanf("%s %s", in, in2);
 //		printf("libc: %i ; ft_atoi: %i\n", atoi(in), ft_atoi(in));
@@ -125,6 +125,10 @@ int main(void)
 		printf("String: %s\n", strncpy(in2, src, strlen(src)));
 		printBits(sizeof(in2), in2);
 */
-/* strncat */
+/* strncat
 		printf("String: %s AND %s\n", strncat(in2, src, 2), ft_strncat(in, src, 2));
+		*/
+/* strlcat */
+		printf("String: %lu AND %zu\n", strlcat(in2, src, size), ft_strlcat(in, src, size));
+
 }
