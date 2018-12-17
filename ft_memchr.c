@@ -6,7 +6,7 @@
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/13 23:13:47 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/15 19:59:37 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/17 20:08:51 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char *src;
 
+	if (!n)
+		return (NULL);
 	src = (const unsigned char *)s;
 	while ((*src != (unsigned char)c) && --n)
 		src++;

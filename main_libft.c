@@ -6,7 +6,7 @@
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/16 21:09:08 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/17 20:06:27 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int main(void)
 {
 //	char str;
-	char in[30] = "rrrrrr\0\0a";
-	char in2[30] = "rrrrrr\0\0a";
-	char *src = "loremipsum";
+//	char in[15] = "rrrrrr\0\0\0\0\0a";
+//	char in2[15] = "rrrrrr\0\0\0\0\0a";
+//	char *src = "abcdef";
 //	char in3[7] = {0};
 //	int c = 1;
 //	char *test;
 //	char *test2;
-	size_t size = 0;
+//	size_t size = 0;
 //	size_t n = 0;
 //	char *ptr = NULL;
 /*	long int lomax;
@@ -95,7 +95,7 @@ int main(void)
 //		printBits (sizeof(in2), in2);
 //		printBits (sizeof(in3), in3);
 //		scanf("%[^\n]%*c", in2);
-		scanf("%zi", &size);
+//		scanf("%zi", &size);
 //		size = strlen(in2);
 //		scanf("%s %s", in, in2);
 //		printf("libc: %i ; ft_atoi: %i\n", atoi(in), ft_atoi(in));
@@ -119,7 +119,8 @@ int main(void)
 /* memchr */
 
 //		printf ("%d and %d\n", memcmp(in2, src, size), ft_memcmp(in2, src, size));
-		//printf ("%s and %s\n", memcmp(src, 49, 1), ft_memcmp(src, 49, 1));
+	//	printf ("libc: %p\n", memchr(NULL, '\0', 0x20));
+		printf ("my: %p\n", ft_memchr(NULL, '\0', 0x20));
 
 /* strncpy
 		printf("String: %s\n", strncpy(in2, src, strlen(src)));
@@ -128,7 +129,45 @@ int main(void)
 /* strncat
 		printf("String: %s AND %s\n", strncat(in2, src, 2), ft_strncat(in, src, 2));
 		*/
-/* strlcat */
+/* strlcat
 		printf("String: %lu AND %zu\n", strlcat(in2, src, size), ft_strlcat(in, src, size));
+		printf("s1: %s", in2);
+		printf("s1: %s", in);
+		*/
 
+/*
+	char			ctab[11];
+	int				itab[11];
+	unsigned long	ltab[11];
+	size_t			j;
+	int				i;
+
+	i = -300;
+	memchr(NULL, 0, 0);
+	printf("long\n");
+	ft_memchr(NULL, 0, 0);
+	printf("AHAHAHA\n");
+	while (i < 300)
+	{
+		j = 0;
+		while (j < 11)
+		{
+			ctab[j] = (char)rand();
+			itab[j] = rand();
+			ltab[j] = (unsigned long)rand() * 10000;
+			j++;
+		}
+					printf("char\n");
+
+		if (memchr(ctab, i, sizeof(ctab)) != ft_memchr(ctab, i, sizeof(ctab)))
+		;
+					printf("int\n");
+		if (memchr(itab, i, sizeof(itab)) != ft_memchr(itab, i, sizeof(itab)))
+;
+printf("long\n");
+		if (memchr(ltab, i, sizeof(ltab)) != ft_memchr(ltab, i, sizeof(ltab)))
+			;
+		++i;
+	}
+	*/
 }
