@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
+/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/17 20:06:27 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/19 02:20:58 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 #include <locale.h>
 #include "libft.h"
 
-void printBits(size_t const size, void const * const ptr);
-void	*ft_memchr(const void *s, int c, size_t n);
+//void printBits(size_t const size, void const * const ptr);
+//char			f_strmap(char c) { return (c + 7); }
 
 int main(void)
 {
 //	char str;
-//	char in[15] = "rrrrrr\0\0\0\0\0a";
+	char *in = "   My head  !   ";
 //	char in2[15] = "rrrrrr\0\0\0\0\0a";
 //	char *src = "abcdef";
 //	char in3[7] = {0};
@@ -103,7 +103,7 @@ int main(void)
 //		printf("libc: %s; ft_strnstr: %s\n", strnstr(in, in2, size), ft_strnstr(in, in2, size));
 //		printf("libc: %d; my_ft: %d", strcmp(in, in2), ft_strcmp(in, in2));
 //		printf("libc: %d; my_ft: %d", strncmp(in, in2, n), ft_strncmp(in, in2, n));
-		usleep(10000);
+//		usleep(10000);
 
 /* memmove */
 /*
@@ -116,12 +116,12 @@ int main(void)
 		printBits (sizeof(in2), in2);
 	//}
 */
-/* memchr */
+/* memchr
 
 //		printf ("%d and %d\n", memcmp(in2, src, size), ft_memcmp(in2, src, size));
-	//	printf ("libc: %p\n", memchr(NULL, '\0', 0x20));
+		printf ("libc: %p\n", memchr(NULL, '\0', 0x20));
 		printf ("my: %p\n", ft_memchr(NULL, '\0', 0x20));
-
+*/
 /* strncpy
 		printf("String: %s\n", strncpy(in2, src, strlen(src)));
 		printBits(sizeof(in2), in2);
@@ -170,4 +170,37 @@ printf("long\n");
 		++i;
 	}
 	*/
+/* strmap
+
+			char	*b = "override this !";
+			char	b2[0xF0];
+			size_t	size = strlen(b);
+
+			for (size_t i = 0; i < size; i++)
+				b2[i] = f_strmap(b[i]);
+			b2[size] = 0;
+			char	*ret = ft_strmap(b, f_strmap);
+			if (!strcmp(b2, ret))
+				printf("GOOD\n");
+*/
+
+/* strtrim
+	printf ("s1:%s\n", in);
+	printf ("s2:%s\n", ft_strtrim(in));
+	*/
+
+/* strclen
+	printf("len is:%zu", ft_strclen(in, '*'));
+	*/
+
+/* strsplit */
+	ft_strsplit(in, ' ');
+//	printf("sting is:%s\npointer is:%p\n", *res, *res);
+//	while (*res)
+//	{
+//		printf("sting is:%s\npointer is:%p\n", *res, *res);
+//		res++;
+//	}
+	//free (res);
+	return 0;
 }
