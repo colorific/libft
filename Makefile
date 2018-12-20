@@ -6,7 +6,7 @@
 #    By: forange- <forange-@student.fr.42>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/08 23:08:59 by kirill            #+#    #+#              #
-#    Updated: 2018/12/20 22:53:02 by forange-         ###   ########.fr        #
+#    Updated: 2018/12/21 00:04:25 by forange-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ ft_strncat.c ft_strlcat.c ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c \
 ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
 ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strparse.c \
 ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
-ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c \
+ft_lstdelone.c ft_lstdel.c
 
 OBJ=$(SRC:.c=.o)
 
