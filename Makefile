@@ -6,7 +6,7 @@
 #    By: kirill <kirill@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/08 23:08:59 by kirill            #+#    #+#              #
-#    Updated: 2018/12/19 23:44:08 by kirill           ###   ########.fr        #
+#    Updated: 2018/12/20 15:11:39 by kirill           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ ft_memchr.c ft_memcmp.c ft_strcpy.c ft_strncpy.c ft_strdup.c ft_strcat.c \
 ft_strncat.c ft_strlcat.c ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c \
 ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
 ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strparse.c \
-ft_strsplit.c ft_itoa.c
+ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c
 
 OBJ=$(SRC:.c=.o)
 

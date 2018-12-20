@@ -6,7 +6,7 @@
 /*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 03:24:11 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/20 02:42:43 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 15:11:31 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strparse(const char *s, char c, size_t *words);
 int		ft_atoi(const char *str);
@@ -62,5 +63,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
 
 #endif
