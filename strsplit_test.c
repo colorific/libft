@@ -6,7 +6,7 @@
 /*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 17:10:59 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/20 02:36:01 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/19 23:27:58 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static void	ft_justdoit(char **ptr, char const *s, char c, size_t tlen)
 {
 	char *cptr;
 	size_t i;
-	size_t jmp;
 
 	i = 0;
 	while (*s)
@@ -36,14 +35,27 @@ static void	ft_justdoit(char **ptr, char const *s, char c, size_t tlen)
 		if (!*s)
 			break;
 		cptr = (char *)ft_memchr(s, c, tlen);
-		jmp = cptr ? (size_t)(cptr - s) : tlen;
-		if (!(ptr[i++] = ft_strsub(s, 0, jmp)))
+
+/* -------------- Test module -------------- */
+
+		if (i == 1)
+			ptr[i] = NULL;
+		else
+			ptr[i] = ft_strsub(s, 0, cptr ? (size_t)(cptr - s) : tlen);
+		if (!(ptr[i++]))
 		{
 			ft_freeall(&(*ptr), --i);
-			return;
+			break;
 		}
-		s += jmp;
-		tlen -= jmp;
+/* -------------- Test module -------------- */
+
+		if (!(ptr[i++] = ft_strsub(s, 0, cptr ? (size_t)(cptr - s) : tlen)))
+		{
+			ft_freeall(&(*ptr), --i);
+			break;
+		}
+		s += cptr ? (size_t)(cptr - s) : tlen;
+		tlen -= cptr - s;
 	}
 	ptr[i] = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/19 02:20:58 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 02:04:34 by kirill           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@
 
 int main(void)
 {
-//	char str;
-	char *in = "   My head  !   ";
+	char **res;
+	char *in = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
 //	char in2[15] = "rrrrrr\0\0\0\0\0a";
 //	char *src = "abcdef";
 //	char in3[7] = {0};
-//	int c = 1;
+//	int c;
 //	char *test;
 //	char *test2;
 //	size_t size = 0;
@@ -194,13 +194,20 @@ printf("long\n");
 	*/
 
 /* strsplit */
-	ft_strsplit(in, ' ');
-//	printf("sting is:%s\npointer is:%p\n", *res, *res);
-//	while (*res)
-//	{
-//		printf("sting is:%s\npointer is:%p\n", *res, *res);
-//		res++;
-//	}
+	res = ft_strsplit(in, ' ');
+	while (*res)
+	{
+		printf("string is:%s\npointer is:%p\n", *res, *res);
+		res++;
+	}
+	printf("string is:%s\npointer is:%p\n", *res, *res);
 	//free (res);
+
+
+/* itoa
+	test = ft_itoa(c);
+	printf("res:%s\n", test);
+	free(test);
+*/
 	return 0;
 }
