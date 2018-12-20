@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 17:10:59 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/20 02:36:01 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 21:18:54 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 static void	ft_freeall(char **ptr, size_t i)
 {
-	++i;
 	while (i-- != 0)
 		ft_memdel((void **)&ptr[i]);
 }
 
 static void	ft_justdoit(char **ptr, char const *s, char c, size_t tlen)
 {
-	char *cptr;
-	size_t i;
-	size_t jmp;
+	char	*cptr;
+	size_t	i;
+	size_t	jmp;
 
 	i = 0;
 	while (*s)
@@ -34,13 +33,13 @@ static void	ft_justdoit(char **ptr, char const *s, char c, size_t tlen)
 			s++;
 		}
 		if (!*s)
-			break;
+			break ;
 		cptr = (char *)ft_memchr(s, c, tlen);
 		jmp = cptr ? (size_t)(cptr - s) : tlen;
 		if (!(ptr[i++] = ft_strsub(s, 0, jmp)))
 		{
 			ft_freeall(&(*ptr), --i);
-			return;
+			return ;
 		}
 		s += jmp;
 		tlen -= jmp;
@@ -48,11 +47,11 @@ static void	ft_justdoit(char **ptr, char const *s, char c, size_t tlen)
 	ptr[i] = NULL;
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	size_t tlen;
-	size_t words;
-	char **ptr;
+	size_t	tlen;
+	size_t	words;
+	char	**ptr;
 
 	ptr = NULL;
 	if (s)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 14:18:18 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/18 14:21:52 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 19:54:11 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1 || !s2)
-		return 0;
+		return (0);
 	return (ft_strcmp(s1, s2) ? 0 : 1);
 }

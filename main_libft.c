@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_libft.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:11:31 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/20 02:04:34 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 22:49:08 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 int main(void)
 {
 	char **res;
-	char *in = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	char *in = " 1 2 3";
 //	char in2[15] = "rrrrrr\0\0\0\0\0a";
 //	char *src = "abcdef";
 //	char in3[7] = {0};
@@ -195,12 +195,12 @@ printf("long\n");
 
 /* strsplit */
 	res = ft_strsplit(in, ' ');
-	while (*res)
-	{
-		printf("string is:%s\npointer is:%p\n", *res, *res);
-		res++;
-	}
-	printf("string is:%s\npointer is:%p\n", *res, *res);
+//	while (*res)
+//	{
+//		printf("string is:%s || pointer is:%p\n", *res, *res);
+//		res++;
+//	}
+	printf("string is:%s || pointer is:%p\n", *res, *res);
 	//free (res);
 
 

@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 12:34:06 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/18 14:00:23 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 19:54:59 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char		*ft_strmap(char const *s, char (*f)(char))
 {
-	char *res;
-	size_t len;
+	char	*res;
+	size_t	len;
 
 	res = NULL;
 	if (s && f)
 	{
 		len = ft_strlen(s);
-		if((res = (char *)malloc(len + 1)))
+		if ((res = (char *)malloc(len + 1)))
 		{
 			while (*s)
 			{

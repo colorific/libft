@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 21:13:19 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/20 02:32:35 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 19:53:48 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_fillstr(long int n, int len, char *out)
+static void		ft_fillstr(long int n, int len, char *out)
 {
 	if (n < 0)
 	{
@@ -31,10 +31,10 @@ static void	ft_fillstr(long int n, int len, char *out)
 static size_t	*ft_ssize(long int n, size_t *res)
 {
 	if (!res)
-		{
-			if (!(res = (size_t*)ft_memalloc(sizeof(size_t))))
-				return (res);
-		}
+	{
+		if (!(res = (size_t*)ft_memalloc(sizeof(size_t))))
+			return (res);
+	}
 	if (n < 0)
 		n = -n;
 	if (n > 9)
@@ -43,18 +43,19 @@ static size_t	*ft_ssize(long int n, size_t *res)
 	return (res);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	char *str;
-	size_t *len;
-	long int p;
+	char		*str;
+	size_t		*len;
+	long int	p;
 
 	p = (long int)n;
 	len = NULL;
 	str = NULL;
 	if ((len = ft_ssize(p, len)))
 	{
-		if ((str = (char*)ft_memalloc(sizeof(char) * (p < 0 ? ++*len : *len) + 1)))
+		if ((str = (char*)ft_memalloc(sizeof(char) * \
+		(p < 0 ? ++*len : *len) + 1)))
 			ft_fillstr(p, --*len, str);
 	}
 	return (str);

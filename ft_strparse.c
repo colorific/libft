@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strparse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 17:21:07 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/18 22:06:33 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 19:55:27 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strparse(const char *s, char c, size_t *words)
 
 	*words = 0;
 	len = 0;
-	while(*s++)
+	while (*s++)
 	{
 		if (*(s - 1) != c && (*s == c || !*s))
 			(*words)++;

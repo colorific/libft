@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 15:01:20 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/20 15:25:25 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 20:10:39 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
-	while (*s && s)
+	if (!s)
+		return ;
+	while (*s)
 		ft_putchar(*s++);
 }

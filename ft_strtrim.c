@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 16:05:23 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/18 16:53:29 by kirill           ###   ########.fr       */
+/*   Updated: 2018/12/20 19:56:04 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
-	char *res;
-	size_t len;
+	char	*res;
+	size_t	len;
 
 	res = NULL;
 	if (s)
@@ -25,7 +25,8 @@ char	*ft_strtrim(char const *s)
 		if (*s)
 		{
 			len = ft_strlen(s) - 1;
-			while (*(s + len) == ' ' || *(s + len) == '\t' || *(s + len) == '\n')
+			while (*(s + len) == ' ' || *(s + len) == '\t' || \
+										*(s + len) == '\n')
 				len--;
 			if ((res = (char*)malloc(len + 2)))
 			{
