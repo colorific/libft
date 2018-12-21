@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr_new.c                                    :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kirill <kirill@student.42.fr>              +#+  +:+       +#+        */
+/*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/11 17:26:44 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/11 17:27:06 by kirill           ###   ########.fr       */
+/*   Created: 2018/12/21 02:05:29 by forange-          #+#    #+#             */
+/*   Updated: 2018/12/21 02:08:04 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr_new(const char *s, int c)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	char	*str;
-
-	str = (char *)s;
-	while (*str != c)
+	if (lst)
 	{
-		if (*str == '\0')
+		while (lst->next)
 		{
-			return (NULL);
+			f(lst);
+			lst = lst->next;
 		}
-		str++;
+		f(lst);
 	}
-	return (str);
 }

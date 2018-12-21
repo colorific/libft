@@ -6,7 +6,7 @@
 /*   By: forange- <forange-@student.fr.42>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 17:10:59 by kirill            #+#    #+#             */
-/*   Updated: 2018/12/20 21:18:54 by forange-         ###   ########.fr       */
+/*   Updated: 2018/12/21 03:59:26 by forange-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char		**ft_strsplit(char const *s, char c)
 	if (s)
 	{
 		tlen = ft_strparse(s, c, &words);
-		if ((ptr = (char**)malloc(sizeof(char*) * words + sizeof(char*))))
+		if ((ptr = (char**)malloc(sizeof(char*) * (words + 1))))
 			ft_justdoit(&(*ptr), s, c, tlen);
 		if (ptr && !*ptr)
 			free(ptr);

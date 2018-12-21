@@ -6,7 +6,7 @@
 #    By: forange- <forange-@student.fr.42>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/08 23:08:59 by kirill            #+#    #+#              #
-#    Updated: 2018/12/21 00:04:25 by forange-         ###   ########.fr        #
+#    Updated: 2018/12/21 02:50:30 by forange-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME=libft.a
 
 CC=gcc
 
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g
 
 RM=rm -f
 
@@ -32,7 +32,7 @@ ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
 ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strparse.c \
 ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c \
-ft_lstdelone.c ft_lstdel.c
+ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
 
 OBJ=$(SRC:.c=.o)
 
